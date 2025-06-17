@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.3](https://github.com/CandriaJS/core-lib/compare/axios-v1.0.2...axios-v1.0.3) (2025-06-17)
+
+
+### 🐛 错误修复
+
+* axios编译 ([3255ce8](https://github.com/CandriaJS/core-lib/commit/3255ce84f7b6f3873c83bb0168261fd8203e3aa3))
+
 ## [1.0.2](https://github.com/CandriaJS/core-lib/compare/axios-v1.0.1...axios-v1.0.2) (2025-06-17)
 
 
