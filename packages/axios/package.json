@@ -5,6 +5,14 @@
   "keywords": [
     "axios"
   ],
+  "homepage": "https://github.com/CandriaJS/core-lib",
+  "bugs": {
+    "url": "https://github.com/CandriaJS/core-lib/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CandriaJS/core-lib.git"
+  },
   "license": "GNU AGPL-3.0",
   "author": "CandriaJS",
   "main": "index.js",

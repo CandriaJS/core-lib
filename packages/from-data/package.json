@@ -26,10 +26,10 @@
     "build": "tsc --noEmit && tsup",
     "sync": "curl -X PUT \"https://registry-direct.npmmirror.com/-/package/@candriajs/from-data/syncs\""
   },
-  "engines": {
-    "node": ">=18"
-  },
   "devDependencies": {
     "form-data": "^4.0.3"
+  },
+  "engines": {
+    "node": ">=18"
   }
 }
