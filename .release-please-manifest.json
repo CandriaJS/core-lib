@@ -2,5 +2,5 @@
   "packages/axios": "1.0.7",
   "packages/form-data": "1.0.4",
   "packages/exec": "1.0.2",
-  "packages/lodash": "1.0.4"
+  "packages/lodash": "1.0.5"
 }
