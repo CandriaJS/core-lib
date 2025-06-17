@@ -1,9 +1,9 @@
 {
-  "name": "@candriajs/from-data",
+  "name": "@candriajs/form-data",
   "version": "1.0.2",
   "description": "一些常用包以及常用函数进行封装，并打包优化, 此包为form-data封装",
   "keywords": [
-    "from-data"
+    "form-data"
   ],
   "homepage": "https://github.com/CandriaJS/core-lib",
   "bugs": {
@@ -24,7 +24,7 @@
   ],
   "scripts": {
     "build": "tsc --noEmit && tsup",
-    "sync": "curl -X PUT \"https://registry-direct.npmmirror.com/-/package/@candriajs/from-data/syncs\""
+    "sync": "curl -X PUT \"https://registry-direct.npmmirror.com/-/package/@candriajs/form-data/syncs\""
   },
   "devDependencies": {
     "form-data": "^4.0.3"

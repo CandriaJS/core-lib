@@ -71,12 +71,12 @@
       "tag-separator": "-",
       "scope": "axios"
     },
-    "packages/from-data": {
+    "packages/form-data": {
       "release-type": "node",
-      "package-name": "@candriajs/from-data",
-      "component": "from-data",
+      "package-name": "@candriajs/form-data",
+      "component": "form-data",
       "tag-separator": "-",
-      "scope": "from-data"
+      "scope": "form-data"
     }
   },
   "commit-search-depth": 50
