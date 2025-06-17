@@ -77,6 +77,13 @@
       "component": "form-data",
       "tag-separator": "-",
       "scope": "form-data"
+    },
+    "packages/exec": {
+      "release-type": "node",
+      "package-name": "@candriajs/exec",
+      "component": "exec",
+      "tag-separator": "-",
+      "scope": "exec"
     }
   },
   "commit-search-depth": 50

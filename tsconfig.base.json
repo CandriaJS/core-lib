@@ -6,10 +6,6 @@
     "alwaysStrict": true,
     // 设置模块解析的基础目录为当前目录（相对路径的基准）
     "baseUrl": ".",
-    // 配置路径映射
-    "paths": {
-      "@/cli/*": ["./packages/cli/src/*"]
-    },
     // 生成对应的 .d.ts 类型声明文件
     "declaration": true,
     // 生成声明文件的 sourcemap，方便调试

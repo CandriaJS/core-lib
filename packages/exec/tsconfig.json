@@ -3,10 +3,9 @@
   "compilerOptions": {
     "outDir": "./dist",
     "rootDir": "./src",
-    "types": ["@types/node"],
     // 配置路径映射
     "paths": {
-      "@/cli/*": ["./packages/cli/src/*"]
+      "@/exec/*": ["./packages/exec/src/*"]
     }
   },
   "include": [

@@ -14,7 +14,10 @@ jobs:
       releases_created: ${{ steps.release-please.outputs.releases_created }}
       core-lib_rerelease: ${{ steps.release-please.outputs['packages/core-lib--release_created'] }}
       axios_rerelease: ${{ steps.release-please.outputs['packages/axios--release_created'] }}
-      form-data_rerelease: ${{ steps.release-please.outputs['packages/form-data--release_created'] }}
+      form-data_rerelease: ${{
+        steps.release-please.outputs['packages/form-data--release_created'] }}
+      exec_rerelease: ${{ steps.release-please.outputs['packages/exec--release_created'] }}
+      lodash_rerelease: ${{ steps.release-please.outputs['packages/lodash--release_created'] }}
     steps:
       - name: 获取token
         uses: actions/create-github-app-token@v2
@@ -118,5 +121,90 @@ jobs:
           token: ${{ secrets.NPM_TOKEN }}
           registry: https://registry.npmjs.org/
           package: packages/form-data
+          access: public
+          provenance: true
+  publish-exec:
+    needs: release
+    if: ${{ needs.release.outputs.exec_rerelease == 'true' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: 设置 pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9.13.2
+          run_install: "- args: [--no-frozen-lockfile]"
+      - name: 构建
+        run: |-
+          pnpm build
+          mkdir -p ${{ runner.temp }}/temp/exec
+          cp -r package.json README.md dist ${{ runner.temp }}/temp/exec
+        working-directory: packages/exec
+      - name: 上传构建产物
+        uses: actions/upload-artifact@v4
+        with:
+          name: exec
+          path: ${{ runner.temp }}/temp/exec
+      - name: 发布到 GitHub Packages
+        id: publish-to-github
+        uses: JS-DevTools/npm-publish@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          registry: https://npm.pkg.github.com
+          package: packages/exec/package.json
+      - name: 发布到 NPM
+        id: publish-to-npm
+        uses: JS-DevTools/npm-publish@v3
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+          registry: https://registry.npmjs.org/
+          package: packages/exec
+          access: public
+          provenance: true
+  publish-lodash:
+    needs: release
+    if: ${{ needs.release.outputs.lodash_rerelease == 'true' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: 设置 pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9.13.2
+          run_install: "- args: [--no-frozen-lockfile]"
+      - name: 构建
+        run: |-
+          pnpm build
+          mkdir -p ${{ runner.temp }}/temp/lodash
+          cp -r package.json README.md dist ${{ runner.temp }}/temp/lodash
+        working-directory: packages/lodash
+      - name: 上传构建产物
+        uses: actions/upload-artifact@v4
+        with:
+          name: lodash
+          path: ${{ runner.temp }}/temp/lodash
+      - name: 发布到 GitHub Packages
+        id: publish-to-github
+        uses: JS-DevTools/npm-publish@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          registry: https://npm.pkg.github.com
+          package: packages/lodash/package.json
+        working-directory: packages/lodash
+      - name: 发布到 NPM
+        id: publish-to-npm
+        uses: JS-DevTools/npm-publish@v3
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+          registry: https://registry.npmjs.org/
+          package: packages/lodash
           access: public
           provenance: true

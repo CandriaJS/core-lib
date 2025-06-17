@@ -48,7 +48,7 @@ const tsup = (dir: string) => {
 export default defineConfig({
   entry: ['src/index.ts'],
   format: 'esm',
-  dts: { resolve: true, only: true },
+  dts: { resolve: true },
   outDir: 'dist',
   target: 'node22',
   platform: 'node',
@@ -124,8 +124,7 @@ const ci = (dir: string, name: string) => {
           token: '${{ secrets.GITHUB_TOKEN }}',
           registry: 'https://npm.pkg.github.com',
           package: `packages/${name}/package.json`
-        },
-        'working-directory': `packages/${name}`
+        }
       },
       {
         name: '发布到 NPM',
