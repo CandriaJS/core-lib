@@ -1,5 +1,6 @@
 {
   "packages/axios": "1.0.5",
   "packages/form-data": "1.0.3",
-  "packages/exec": "1.0.0"
+  "packages/exec": "1.0.0",
+  "packages/lodash": "1.0.0"
 }

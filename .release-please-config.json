@@ -84,6 +84,13 @@
       "component": "exec",
       "tag-separator": "-",
       "scope": "exec"
+    },
+    "packages/lodash": {
+      "release-type": "node",
+      "package-name": "@candriajs/lodash",
+      "component": "lodash",
+      "tag-separator": "-",
+      "scope": "lodash"
     }
   },
   "commit-search-depth": 50

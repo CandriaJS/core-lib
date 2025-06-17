@@ -37,18 +37,6 @@ export const options: Options = ({
 export default defineConfig(options)
 
 const copyFiles = () => {
-  const file_name_path = fileURLToPath(import.meta.url)
-  const file_path = dirname(file_name_path)
-
-  const distDir = path.join(file_path, 'dist')
   fs.copyFileSync('./node_modules/axios/index.d.ts', './dist/index.d.ts')
-
-  // 删除 .d.cts 文件
-  // fs.readdirSync(distDir).forEach((file) => {
-  //   if (file.endsWith('.d.cts')) {
-  //     fs.rmSync(path.join(distDir, file))
-  //   }
-  // })
-
   console.log('构建axios成功!')
 }

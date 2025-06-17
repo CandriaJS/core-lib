@@ -14,8 +14,7 @@ jobs:
       releases_created: ${{ steps.release-please.outputs.releases_created }}
       core-lib_rerelease: ${{ steps.release-please.outputs['packages/core-lib--release_created'] }}
       axios_rerelease: ${{ steps.release-please.outputs['packages/axios--release_created'] }}
-      form-data_rerelease: ${{
-        steps.release-please.outputs['packages/form-data--release_created'] }}
+      form-data_rerelease: ${{ steps.release-please.outputs['packages/form-data--release_created'] }}
       exec_rerelease: ${{ steps.release-please.outputs['packages/exec--release_created'] }}
       lodash_rerelease: ${{ steps.release-please.outputs['packages/lodash--release_created'] }}
     steps:
@@ -198,7 +197,6 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           registry: https://npm.pkg.github.com
           package: packages/lodash/package.json
-        working-directory: packages/lodash
       - name: 发布到 NPM
         id: publish-to-npm
         uses: JS-DevTools/npm-publish@v3

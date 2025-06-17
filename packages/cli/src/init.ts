@@ -45,7 +45,7 @@ const pack = (dir: string, name: string) => {
 const tsup = (dir: string) => {
   const template = `import { defineConfig } from 'tsup'
 
-export default defineConfig({
+export const options: Options ({
   entry: ['src/index.ts'],
   format: 'esm',
   dts: { resolve: true },
@@ -57,6 +57,7 @@ export default defineConfig({
     js: '.js'
   })
 })
+export default defineConfig(options)
 `
 
   fs.writeFileSync(path.join(dir, 'tsup.config.ts'), template)
