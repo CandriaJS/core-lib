@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.6](https://github.com/CandriaJS/core-lib/compare/axios-v1.0.5...axios-v1.0.6) (2025-06-17)
+
+
+### 🔧 其他更新
+
+* 增加exec函数 ([309b60c](https://github.com/CandriaJS/core-lib/commit/309b60c239f61303c3829ef740b46fb64d4da521))
+* 增加lodash库 ([a06b215](https://github.com/CandriaJS/core-lib/commit/a06b215ccf524f2251973f7a5f4cfbd0be4d0757))
+
 ## [1.0.5](https://github.com/CandriaJS/core-lib/compare/axios-v1.0.4...axios-v1.0.5) (2025-06-17)
 
 
