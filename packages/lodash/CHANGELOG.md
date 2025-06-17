@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.4](https://github.com/CandriaJS/core-lib/compare/lodash-v1.0.3...lodash-v1.0.4) (2025-06-17)
+
+
+### 🐛 错误修复
+
+* lodash类型 ([89f39af](https://github.com/CandriaJS/core-lib/commit/89f39af4a6d97a4dc8b582c2d81914b522c89462))
+
 ## [1.0.3](https://github.com/CandriaJS/core-lib/compare/lodash-v1.0.2...lodash-v1.0.3) (2025-06-17)
 
 
