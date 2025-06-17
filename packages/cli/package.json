@@ -1,0 +1,19 @@
+{
+  "name": "@candriajs/cli",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [
+    "cli"
+  ],
+  "license": "GNU AGPL-3.0",
+  "author": "CandriaJS",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx src/index.ts"
+  },
+  "devDependencies": {
+    "@inquirer/prompts": "^7.5.3",
+    "commander": "^14.0.0",
+    "yaml": "^2.8.0"
+  }
+}
