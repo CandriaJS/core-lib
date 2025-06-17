@@ -20,7 +20,7 @@ export default defineConfig({
 
 
 const copyFiles = () => {
-  const sourceDir = './node_modules/lod'
+  const sourceDir = './node_modules/@types/lodash'
   const targetDir = './dist/types'
 
   const copyRecursiveSync = (src: string, dest: string) => {

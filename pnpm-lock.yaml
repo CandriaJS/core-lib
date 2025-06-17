@@ -80,12 +80,12 @@ importers:
 
   packages/lodash:
     devDependencies:
+      '@types/lodash':
+        specifier: ^4.17.17
+        version: 4.17.17
       '@types/lodash-es':
         specifier: ^4.17.12
         version: 4.17.12
-      lod:
-        specifier: npm:@types/lodash@^4.17.17
-        version: '@types/lodash@4.17.17'
       lodash-es:
         specifier: ^4.17.21
         version: 4.17.21
