@@ -20,7 +20,7 @@ export default defineConfig({
 
 
 const copyFiles = () => {
-  const sourceDir = './node_modules/@types/lodash-es'
+  const sourceDir = './node_modules/lod'
   const targetDir = './dist/types'
   
   fs.mkdirSync(targetDir, { recursive: true })

@@ -145,7 +145,7 @@ const ci = (dir: string, name: string) => {
   fs.writeFileSync(`${dir}/.github/workflows/release.yaml`, yaml.stringify(config))
 }
 
-const files = (dir: string) => {
+const files = (dir: string, name: string) => {
   fs.mkdirSync(dir, { recursive: true })
   fs.mkdirSync(path.join(dir, 'src'), { recursive: true })
   // src/index.ts
@@ -171,6 +171,9 @@ const files = (dir: string) => {
   if (!fs.existsSync(path.join(dir, 'tsconfig.json'))) {
     fs.writeFileSync(path.join(dir, 'tsconfig.json'), JSON.stringify(config, null, 2))
   }
+  if (!fs.existsSync(path.join(dir, 'README.md'))) {
+    fs.writeFileSync(path.join(dir, 'README.md'), `# ${name}\n`)
+  }
 }
 
 export async function init () {
@@ -184,7 +187,7 @@ export async function init () {
   }
   const name = options.projecName
   const dir = path.join(basePath, 'packages', name)
-  files(dir)
+  files(dir, name)
   pack(dir, name)
   release(basePath, name)
   ci(basePath, name)

@@ -45,8 +45,8 @@ importers:
   packages/axios:
     dependencies:
       form-data:
-        specifier: npm:@candriajs/form-data@1.0.3
-        version: '@candriajs/form-data@1.0.3'
+        specifier: npm:@candriajs/form-data@1.0.4
+        version: '@candriajs/form-data@1.0.4'
     devDependencies:
       axios:
         specifier: ^1.10.0
@@ -83,14 +83,17 @@ importers:
       '@types/lodash-es':
         specifier: ^4.17.12
         version: 4.17.12
+      lod:
+        specifier: npm:@types/lodash@^4.17.17
+        version: '@types/lodash@4.17.17'
       lodash-es:
         specifier: ^4.17.21
         version: 4.17.21
 
 packages:
 
-  '@candriajs/form-data@1.0.3':
-    resolution: {integrity: sha512-N7G0QEF3kJ8vvvcklv7hj6Uh5A3yvYVZ2PEHzYCmI9L0B3Oy21O/PrU5Dllmr3pCV7I8tt0tWdK0a51ELBVu9g==, tarball: https://registry.npmjs.org/@candriajs/form-data/-/form-data-1.0.3.tgz}
+  '@candriajs/form-data@1.0.4':
+    resolution: {integrity: sha512-Nz21G9Rgq+hXaiCUa113pvjjJvgatqWFzERx2+5RpvuWyX196A7/scb3yQd+SD4sB76WqKJ2bXXKOAOHIR1WiQ==, tarball: https://registry.npmjs.org/@candriajs/form-data/-/form-data-1.0.4.tgz}
     engines: {node: '>=18'}
 
   '@emnapi/core@1.4.3':
@@ -2226,7 +2229,7 @@ packages:
 
 snapshots:
 
-  '@candriajs/form-data@1.0.3': {}
+  '@candriajs/form-data@1.0.4': {}
 
   '@emnapi/core@1.4.3':
     dependencies:
