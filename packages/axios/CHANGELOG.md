@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.5](https://github.com/CandriaJS/core-lib/compare/axios-v1.0.4...axios-v1.0.5) (2025-06-17)
+
+
+### 🐛 错误修复
+
+* axios的form-data ([c36676c](https://github.com/CandriaJS/core-lib/commit/c36676cce24b2148a2434d167da686f83c970f0e))
+
 ## [1.0.4](https://github.com/CandriaJS/core-lib/compare/axios-v1.0.3...axios-v1.0.4) (2025-06-17)
 
 
