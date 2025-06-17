@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.7](https://github.com/CandriaJS/core-lib/compare/axios-v1.0.6...axios-v1.0.7) (2025-06-17)
+
+
+### 📦️ 构建系统
+
+* **axios:** 升级 form-data 依赖到 1.0.4 版本 ([39d27ad](https://github.com/CandriaJS/core-lib/commit/39d27ad0e340d301521bf24d49d995173e87fd19))
+
 ## [1.0.6](https://github.com/CandriaJS/core-lib/compare/axios-v1.0.5...axios-v1.0.6) (2025-06-17)
 
 

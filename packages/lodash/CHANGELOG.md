@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.3](https://github.com/CandriaJS/core-lib/compare/lodash-v1.0.2...lodash-v1.0.3) (2025-06-17)
+
+
+### 📦️ 构建系统
+
+* **lodash:** 更新类型定义文件路径 ([ecd608a](https://github.com/CandriaJS/core-lib/commit/ecd608a35223aace0020e5772a13c084587772f5))
+
 ## [1.0.2](https://github.com/CandriaJS/core-lib/compare/lodash-v1.0.1...lodash-v1.0.2) (2025-06-17)
 
 
