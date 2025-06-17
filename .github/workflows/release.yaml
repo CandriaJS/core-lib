@@ -1,0 +1,192 @@
+name: 发布发行版
+on:
+  workflow_dispatch: null
+  push:
+    branches:
+      - main
+permissions:
+  contents: read
+  id-token: write
+  packages: write
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    outputs:
+      releases_created: ${{ steps.release-please.outputs.releases_created }}
+      core-lib_rerelease: ${{ steps.release-please.outputs['packages/core-lib--release_created'] }}
+      axios_rerelease: ${{ steps.release-please.outputs['packages/axios--release_created'] }}
+      from-data_rerelease: ${{ steps.release-please.outputs['packages/from-data--release_created'] }}
+    steps:
+      - name: 获取token
+        uses: actions/create-github-app-token@v2
+        id: app-token
+        with:
+          app-id: ${{ secrets.APP_ID }}
+          private-key: ${{ secrets.APP_PRIVATE_KEY }}
+      - name: 获取用户ID
+        id: get-user-id
+        run: echo "user-id=$(gh api "/users/${{ steps.app-token.outputs.app-slug
+          }}[bot]" --jq .id)" >> "$GITHUB_OUTPUT"
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
+      - name: 运行 release-please-action
+        id: release-please
+        uses: googleapis/release-please-action@v4
+        with:
+          token: ${{ steps.app-token.outputs.token }}
+          config-file: .release-please-config.json
+          manifest-file: .release-please-manifest.json
+  publish-core-lib:
+    needs: release
+    if: ${{ needs.release.outputs.core-lib_rerelease == 'true' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: 设置 pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9.13.2
+          run_install: "- args: [--no-frozen-lockfile]"
+        env:
+          working-directory: .
+      - name: 构建
+        id: build-package
+        run: |-
+          pnpm build
+          pnpm pkg delete devDependencies
+          mkdir -p ${{ runner.temp }}/temp/${name}
+          cp -r package.json README.md dist ${{ runner.temp }}/temp/${name}
+        env:
+          WORKING_DIR: packages/core-lib
+      - name: 上传构建产物
+        uses: actions/upload-artifact@v4
+        with:
+          name: core-lib
+          path: ${{ runner.temp }}/temp/core-lib
+        env:
+          WORKING_DIR: packages/core-lib
+      - name: 发布到 GitHub Packages
+        id: publish-to-github
+        uses: JS-DevTools/npm-publish@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          registry: https://npm.pkg.github.com
+        env:
+          WORKING_DIR: packages/core-lib
+      - name: 发布到 NPM
+        id: publish-to-npm
+        uses: JS-DevTools/npm-publish@v3
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+          registry: https://registry.npmjs.org/
+          access: public
+          provenance: true
+        env:
+          WORKING_DIR: packages/core-lib
+  publish-axios:
+    needs: release
+    if: ${{ needs.release.outputs.axios_rerelease == 'true' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: 设置 pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9.13.2
+          run_install: |
+            - args: [--no-frozen-lockfile]
+        env:
+          working-directory: .
+      - name: 构建
+        id: build-package
+        run: |
+          pnpm build
+          pnpm pkg delete devDependencies
+          mkdir -p ${{ runner.temp }}/temp/axios
+          cp -r package.json README.md dist ${{ runner.temp }}/temp/axios
+        env:
+          WORKING_DIR: packages/axios
+      - name: 上传构建产物
+        uses: actions/upload-artifact@v4
+        with:
+          name: axios
+          path: ${{ runner.temp }}/temp/axios
+        env:
+          WORKING_DIR: packages/axios
+      - name: 发布到 GitHub Packages
+        id: publish-to-github
+        uses: JS-DevTools/npm-publish@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          registry: https://npm.pkg.github.com
+        env:
+          WORKING_DIR: packages/axios
+      - name: 发布到 NPM
+        id: publish-to-npm
+        uses: JS-DevTools/npm-publish@v3
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+          registry: https://registry.npmjs.org/
+          access: public
+          provenance: true
+        env:
+          WORKING_DIR: packages/axios
+  publish-from-data:
+    needs: release
+    if: ${{ needs.release.outputs.from-data_rerelease == 'true' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: 设置 pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9.13.2
+          run_install: "- args: [--no-frozen-lockfile]"
+        env:
+          working-directory: .
+      - name: 构建
+        id: build-package
+        run: |-
+          pnpm build
+          pnpm pkg delete devDependencies
+          mkdir -p ${{ runner.temp }}/temp/${name}
+          cp -r package.json README.md dist ${{ runner.temp }}/temp/${name}
+        env:
+          WORKING_DIR: packages/from-data
+      - name: 上传构建产物
+        uses: actions/upload-artifact@v4
+        with:
+          name: from-data
+          path: ${{ runner.temp }}/temp/from-data
+        env:
+          WORKING_DIR: packages/from-data
+      - name: 发布到 GitHub Packages
+        id: publish-to-github
+        uses: JS-DevTools/npm-publish@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          registry: https://npm.pkg.github.com
+        env:
+          WORKING_DIR: packages/from-data
+      - name: 发布到 NPM
+        id: publish-to-npm
+        uses: JS-DevTools/npm-publish@v3
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+          registry: https://registry.npmjs.org/
+          access: public
+          provenance: true
+        env:
+          WORKING_DIR: packages/from-data

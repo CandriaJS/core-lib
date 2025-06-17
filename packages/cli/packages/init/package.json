@@ -1,0 +1,32 @@
+{
+  "name": "@candriajs/init",
+  "version": "1.0.0",
+  "description": "Use vite+tsup to recompile init into esm, which is smaller in size.",
+  "keywords": [
+    "init"
+  ],
+  "homepage": "https://github.com/CandriaJS/core-lib",
+  "bugs": {
+    "url": "https://github.com/CandriaJS/core-lib/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CandriaJS/core-lib.git"
+  },
+  "license": "GNU AGPL-3.0",
+  "author": "CandriaJS",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "index.js"
+  ],
+  "scripts": {
+    "build": "tsc --noEmit && tsup",
+    "sync": "curl -X PUT \"https://registry-direct.npmmirror.com/-/package/@candriajs/init/syncs\""
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
