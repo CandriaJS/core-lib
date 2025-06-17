@@ -27,7 +27,7 @@
     "sync": "curl -X PUT \"https://registry-direct.npmmirror.com/-/package/@candriajs/axios/syncs\""
   },
   "dependencies": {
-    "form-data": "npm:@candriajs/form-data@1.0.3"
+    "form-data": "npm:@candriajs/form-data@1.0.4"
   },
   "devDependencies": {
     "axios": "^1.10.0",
