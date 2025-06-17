@@ -45,8 +45,8 @@ importers:
   packages/axios:
     dependencies:
       form-data:
-        specifier: workspace:../form-data
-        version: link:../form-data
+        specifier: npm:@candriajs/form-data@1.0.3
+        version: '@candriajs/form-data@1.0.3'
     devDependencies:
       axios:
         specifier: ^1.10.0
@@ -77,6 +77,10 @@ importers:
         version: 4.0.3
 
 packages:
+
+  '@candriajs/form-data@1.0.3':
+    resolution: {integrity: sha512-N7G0QEF3kJ8vvvcklv7hj6Uh5A3yvYVZ2PEHzYCmI9L0B3Oy21O/PrU5Dllmr3pCV7I8tt0tWdK0a51ELBVu9g==, tarball: https://registry.npmjs.org/@candriajs/form-data/-/form-data-1.0.3.tgz}
+    engines: {node: '>=18'}
 
   '@emnapi/core@1.4.3':
     resolution: {integrity: sha512-4m62DuCE07lw01soJwPiBGC0nAww0Q+RY70VZ+n49yDIO13yyinhbWCeNnaob0lakDtWQzSdtNWzJeOJt2ma+g==}
@@ -2201,6 +2205,8 @@ packages:
     engines: {node: '>=18'}
 
 snapshots:
+
+  '@candriajs/form-data@1.0.3': {}
 
   '@emnapi/core@1.4.3':
     dependencies:

@@ -105,7 +105,7 @@ const ci = (dir: string, name: string) => {
       },
       {
         name: '构建',
-        run: `pnpm build\npnpm pkg delete devDependencies\nmkdir -p \${{ runner.temp }}/temp/${name}\ncp -r package.json README.md dist \${{ runner.temp }}/temp/${name}`,
+        run: `pnpm build\nmkdir -p \${{ runner.temp }}/temp/${name}\ncp -r package.json README.md dist \${{ runner.temp }}/temp/${name}`,
         'working-directory': `packages/${name}`
       },
       {
