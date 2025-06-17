@@ -22,15 +22,23 @@ export default defineConfig({
 const copyFiles = () => {
   const sourceDir = './node_modules/lod'
   const targetDir = './dist/types'
-  
-  fs.mkdirSync(targetDir, { recursive: true })
-  
-  const files = fs.readdirSync(sourceDir)
-  files.forEach(file => {
-    fs.copyFileSync(
-      path.join(sourceDir, file),
-      path.join(targetDir, file)
-    )
-  })
-  console.log('构建lodash成功!')
+
+  const copyRecursiveSync = (src: string, dest: string) => {
+    const stat = fs.statSync(src)
+    
+    if (stat.isDirectory()) {
+      fs.mkdirSync(dest, { recursive: true })
+      fs.readdirSync(src).forEach(item => {
+        copyRecursiveSync(
+          path.join(src, item),
+          path.join(dest, item)
+        )
+      })
+    } else {
+      fs.copyFileSync(src, dest)
+    }
+  }
+
+  copyRecursiveSync(sourceDir, targetDir)
+  console.log('构建 lodash 成功!')
 }
