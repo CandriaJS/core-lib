@@ -1,3 +1,4 @@
+import fs from 'node:fs'
 import { builtinModules } from 'node:module'
 
 import { defineConfig } from 'vite'

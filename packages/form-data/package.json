@@ -17,13 +17,13 @@
   "author": "CandriaJS",
   "type": "module",
   "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "types": "./dist/types.d.ts",
   "files": [
     "dist",
-    "index.js"
+    "README.md"
   ],
   "scripts": {
-    "build": "vite build && tsup",
+    "build": "tsup && vite build",
     "sync": "curl -X PUT \"https://registry-direct.npmmirror.com/-/package/@candriajs/form-data/syncs\""
   },
   "devDependencies": {

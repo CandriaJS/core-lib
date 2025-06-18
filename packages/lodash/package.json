@@ -20,7 +20,7 @@
   "types": "./dist/types/index.d.ts",
   "files": [
     "dist",
-    "index.js"
+    "README.md"
   ],
   "scripts": {
     "build": "tsc --noEmit && tsup",

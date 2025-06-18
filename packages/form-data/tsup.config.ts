@@ -1,6 +1,8 @@
-import { defineConfig } from 'tsup'
+import { defineConfig, Options } from 'tsup'
+import fs from 'node:fs'
+import path from 'node:path'
 
-export default defineConfig({
+export const options: Options = ({
   entry: ['src/types.ts'],
   format: 'esm',
   dts: { resolve: true, only: true },
@@ -9,3 +11,4 @@ export default defineConfig({
   platform: 'node',
   minify: true,
 })
+export default defineConfig(options)
