@@ -5,7 +5,7 @@ import { defineConfig } from 'vite'
 
 export default defineConfig({
   build: {
-    target: 'node18',
+    target: 'node22',
     lib: {
       formats: [
         'es'
@@ -20,7 +20,8 @@ export default defineConfig({
     rollupOptions: {
       external: [
         ...builtinModules,
-        ...builtinModules.map((mod) => `node:${mod}`)
+        ...builtinModules.map((mod) => `node:${mod}`),
+        'form-data'
       ],
       output: {
         inlineDynamicImports: true
