@@ -2,5 +2,6 @@
   "packages/axios": "1.0.8",
   "packages/form-data": "1.0.4",
   "packages/exec": "1.0.3",
-  "packages/lodash": "1.0.6"
+  "packages/lodash": "1.0.6",
+  "packages/simple-git": "1.0.0"
 }

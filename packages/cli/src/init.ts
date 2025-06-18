@@ -43,9 +43,9 @@ const pack = (dir: string, name: string) => {
 }
 
 const tsup = (dir: string) => {
-  const template = `import { defineConfig } from 'tsup'
+  const template = `import { defineConfig, type Options } from 'tsup'
 
-export const options: Options ({
+export const options: Options = ({
   entry: ['src/index.ts'],
   format: 'esm',
   dts: { resolve: true },
@@ -119,7 +119,6 @@ const ci = (dir: string, name: string) => {
       },
       {
         name: '发布到 GitHub Packages',
-        id: 'publish-to-github',
         uses: 'JS-DevTools/npm-publish@v3',
         with: {
           token: '${{ secrets.GITHUB_TOKEN }}',
@@ -129,7 +128,6 @@ const ci = (dir: string, name: string) => {
       },
       {
         name: '发布到 NPM',
-        id: 'publish-to-npm',
         uses: 'JS-DevTools/npm-publish@v3',
         with: {
           token: '${{ secrets.NPM_TOKEN }}',

@@ -91,6 +91,13 @@
       "component": "lodash",
       "tag-separator": "-",
       "scope": "lodash"
+    },
+    "packages/simple-git": {
+      "release-type": "node",
+      "package-name": "@candriajs/simple-git",
+      "component": "simple-git",
+      "tag-separator": "-",
+      "scope": "simple-git"
     }
   },
   "commit-search-depth": 50
