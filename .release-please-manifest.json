@@ -1,7 +1,7 @@
 {
-  "packages/axios": "1.0.12",
-  "packages/form-data": "1.0.6",
+  "packages/axios": "1.0.13",
+  "packages/form-data": "1.0.7",
   "packages/exec": "1.0.4",
   "packages/lodash": "1.0.7",
-  "packages/simple-git": "1.0.1"
+  "packages/simple-git": "1.0.2"
 }
