@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.6](https://github.com/CandriaJS/core-lib/compare/form-data-v1.0.5...form-data-v1.0.6) (2025-06-18)
+
+
+### 🐛 错误修复
+
+* build form-data ([63d3ada](https://github.com/CandriaJS/core-lib/commit/63d3ada381de084803ddf151160ad533e5fab689))
+
 ## [1.0.5](https://github.com/CandriaJS/core-lib/compare/form-data-v1.0.4...form-data-v1.0.5) (2025-06-18)
 
 
