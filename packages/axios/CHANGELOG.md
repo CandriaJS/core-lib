@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.9](https://github.com/CandriaJS/core-lib/compare/axios-v1.0.8...axios-v1.0.9) (2025-06-18)
+
+
+### 🐛 错误修复
+
+* axios入口路径 ([c76586d](https://github.com/CandriaJS/core-lib/commit/c76586ddc1ad26ef3a6dd03cf6ccda3d7f15e8d7))
+
 ## [1.0.8](https://github.com/CandriaJS/core-lib/compare/axios-v1.0.7...axios-v1.0.8) (2025-06-18)
 
 
