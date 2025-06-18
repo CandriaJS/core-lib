@@ -24,7 +24,7 @@
     "index.js"
   ],
   "scripts": {
-    "build": "tsc --noEmit && tsup",
+    "build": "vite build",
     "sync": "curl -X PUT \"https://registry-direct.npmmirror.com/-/package/@candriajs/axios/syncs\""
   },
   "dependencies": {

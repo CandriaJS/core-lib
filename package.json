@@ -28,8 +28,9 @@
     "neostandard": "^0.12.1",
     "simple-git": "^3.28.0",
     "tsc-alias": "^1.8.11",
-    "tsup": "^8.4.0",
+    "tsup": "^8.5.0",
     "tsx": "^4.19.3",
-    "typescript": "^5.8.3"
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5"
   }
 }
