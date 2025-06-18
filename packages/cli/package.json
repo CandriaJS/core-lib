@@ -5,6 +5,7 @@
   "keywords": [
     "cli"
   ],
+  "type": "module",
   "license": "GNU AGPL-3.0",
   "author": "CandriaJS",
   "main": "index.js",

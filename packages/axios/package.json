@@ -16,6 +16,7 @@
   },
   "license": "GNU AGPL-3.0",
   "author": "CandriaJS",
+  "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
