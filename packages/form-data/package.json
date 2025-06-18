@@ -23,7 +23,7 @@
     "README.md"
   ],
   "scripts": {
-    "build": "tsup && vite build",
+    "build": "vite build && tsup",
     "sync": "curl -X PUT \"https://registry-direct.npmmirror.com/-/package/@candriajs/form-data/syncs\""
   },
   "devDependencies": {
