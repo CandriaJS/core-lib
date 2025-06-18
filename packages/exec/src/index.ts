@@ -147,3 +147,5 @@ export function execSync<T extends boolean = false> (
     } as ExecReturn<T>
   }
 }
+
+export * from '@/exec/types'
