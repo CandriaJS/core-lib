@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.0.5](https://github.com/CandriaJS/core-lib/compare/form-data-v1.0.4...form-data-v1.0.5) (2025-06-18)
+
+
+### ⚡️ 性能优化
+
+* 优化构建 ([cbe1e3f](https://github.com/CandriaJS/core-lib/commit/cbe1e3ff2aaf061a5dbef1229dc4a809a8dc6c6b))
+
+
+### 📦️ 构建系统
+
+* **form-data:** 优化 form-data 包的构建配置 ([b478247](https://github.com/CandriaJS/core-lib/commit/b478247e9c3389edec7e6e2d38af2d4d09bd9233))
+
 ## [1.0.4](https://github.com/CandriaJS/core-lib/compare/form-data-v1.0.3...form-data-v1.0.4) (2025-06-17)
 
 

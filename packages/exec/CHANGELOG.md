@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.4](https://github.com/CandriaJS/core-lib/compare/exec-v1.0.3...exec-v1.0.4) (2025-06-18)
+
+
+### ⚡️ 性能优化
+
+* 优化构建 ([cbe1e3f](https://github.com/CandriaJS/core-lib/commit/cbe1e3ff2aaf061a5dbef1229dc4a809a8dc6c6b))
+
 ## [1.0.3](https://github.com/CandriaJS/core-lib/compare/exec-v1.0.2...exec-v1.0.3) (2025-06-18)
 
 
