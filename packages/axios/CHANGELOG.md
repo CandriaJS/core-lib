@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.8](https://github.com/CandriaJS/core-lib/compare/axios-v1.0.7...axios-v1.0.8) (2025-06-18)
+
+
+### ♻️ 代码重构
+
+* **tsup:** 优化 tsup 配置文件结构 ([82c9a21](https://github.com/CandriaJS/core-lib/commit/82c9a210167744b82525360c7f5e73b95566576f))
+
 ## [1.0.7](https://github.com/CandriaJS/core-lib/compare/axios-v1.0.6...axios-v1.0.7) (2025-06-17)
 
 
