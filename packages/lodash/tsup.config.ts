@@ -1,7 +1,9 @@
-import { defineConfig } from 'tsup'
+import { defineConfig, type Options } from 'tsup'
 import fs from 'node:fs'
 import path from 'node:path'
-export default defineConfig({
+
+
+export const options: Options = ({
   entry: ['src/index.ts'],
   format: 'esm',
   dts: false,
@@ -17,7 +19,7 @@ export default defineConfig({
     copyFiles()
   }
 })
-
+export default defineConfig(options)
 
 const copyFiles = () => {
   const sourceDir = './node_modules/@types/lodash'

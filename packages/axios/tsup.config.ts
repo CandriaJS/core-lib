@@ -1,11 +1,8 @@
 import fs from 'node:fs'
-import path, { dirname } from 'node:path'
-import { fileURLToPath } from 'node:url'
 import { builtinModules } from 'node:module'
 
 import { defineConfig, type Options } from 'tsup'
 
-// const pkg = JSON.parse(fs.readFileSync(new URL('package.json', import.meta.url), 'utf-8'))
 
 export const options: Options = ({
   entry: ['src/index.ts'],      // 入口文件
