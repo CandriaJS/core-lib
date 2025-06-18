@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.7](https://github.com/CandriaJS/core-lib/compare/lodash-v1.0.6...lodash-v1.0.7) (2025-06-18)
+
+
+### ⚡️ 性能优化
+
+* 优化构建 ([cbe1e3f](https://github.com/CandriaJS/core-lib/commit/cbe1e3ff2aaf061a5dbef1229dc4a809a8dc6c6b))
+
 ## [1.0.6](https://github.com/CandriaJS/core-lib/compare/lodash-v1.0.5...lodash-v1.0.6) (2025-06-18)
 
 

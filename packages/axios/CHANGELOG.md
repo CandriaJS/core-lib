@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.0.12](https://github.com/CandriaJS/core-lib/compare/axios-v1.0.11...axios-v1.0.12) (2025-06-18)
+
+
+### ⚡️ 性能优化
+
+* 优化构建 ([cbe1e3f](https://github.com/CandriaJS/core-lib/commit/cbe1e3ff2aaf061a5dbef1229dc4a809a8dc6c6b))
+
+
+### 📦️ 构建系统
+
+* **axios:** 使用 Vite 替代 tsup 构建 Axios ([520c272](https://github.com/CandriaJS/core-lib/commit/520c2724657e1595208419414cab49369018d94b))
+* **form-data:** 优化 form-data 包的构建配置 ([b478247](https://github.com/CandriaJS/core-lib/commit/b478247e9c3389edec7e6e2d38af2d4d09bd9233))
+
 ## [1.0.11](https://github.com/CandriaJS/core-lib/compare/axios-v1.0.10...axios-v1.0.11) (2025-06-18)
 
 
