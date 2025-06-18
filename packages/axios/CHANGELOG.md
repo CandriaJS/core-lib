@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.10](https://github.com/CandriaJS/core-lib/compare/axios-v1.0.9...axios-v1.0.10) (2025-06-18)
+
+
+### ⚡️ 性能优化
+
+* 优化axios打包 ([1c0bc3e](https://github.com/CandriaJS/core-lib/commit/1c0bc3ea12c85effabb493a9b656c461e1cb6b75))
+
 ## [1.0.9](https://github.com/CandriaJS/core-lib/compare/axios-v1.0.8...axios-v1.0.9) (2025-06-18)
 
 
