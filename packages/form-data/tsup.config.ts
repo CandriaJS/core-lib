@@ -1,14 +1,11 @@
 import { defineConfig } from 'tsup'
 
 export default defineConfig({
-  entry: ['src/index.ts'],
+  entry: ['src/types.ts'],
   format: 'esm',
-  dts: { resolve: true },
+  dts: { resolve: true, only: true },
   outDir: 'dist',
   target: 'node22',
   platform: 'node',
   minify: true,
-  outExtension: ( ) => ({
-    js: '.js'
-  })
 })
