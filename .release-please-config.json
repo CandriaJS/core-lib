@@ -98,6 +98,13 @@
       "component": "simple-git",
       "tag-separator": "-",
       "scope": "simple-git"
+    },
+    "packages/dotenv": {
+      "release-type": "node",
+      "package-name": "@candriajs/dotenv",
+      "component": "dotenv",
+      "tag-separator": "-",
+      "scope": "dotenv"
     }
   },
   "commit-search-depth": 50

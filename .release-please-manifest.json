@@ -3,5 +3,6 @@
   "packages/form-data": "1.0.7",
   "packages/exec": "1.0.4",
   "packages/lodash": "1.0.7",
-  "packages/simple-git": "1.0.2"
+  "packages/simple-git": "1.0.2",
+  "packages/dotenv": "1.0.0"
 }

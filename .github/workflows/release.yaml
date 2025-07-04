@@ -20,6 +20,7 @@ jobs:
       lodash_rerelease: ${{ steps.release-please.outputs['packages/lodash--release_created'] }}
       simple-git_rerelease: ${{
         steps.release-please.outputs['packages/simple-git--release_created'] }}
+      dotenv_rerelease: ${{ steps.release-please.outputs['packages/dotenv--release_created'] }}
     steps:
       - name: 获取token
         uses: actions/create-github-app-token@v2
@@ -239,5 +240,45 @@ jobs:
           token: ${{ secrets.NPM_TOKEN }}
           registry: https://registry.npmjs.org/
           package: packages/simple-git
+          access: public
+          provenance: true
+  publish-dotenv:
+    needs: release
+    if: ${{ needs.release.outputs.dotenv_rerelease == 'true' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: 设置 pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9.13.2
+          run_install: "- args: [--no-frozen-lockfile]"
+      - name: 构建
+        run: |-
+          pnpm build
+          mkdir -p ${{ runner.temp }}/temp/dotenv
+          cp -r package.json README.md dist ${{ runner.temp }}/temp/dotenv
+        working-directory: packages/dotenv
+      - name: 上传构建产物
+        uses: actions/upload-artifact@v4
+        with:
+          name: dotenv
+          path: ${{ runner.temp }}/temp/dotenv
+      - name: 发布到 GitHub Packages
+        uses: JS-DevTools/npm-publish@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          registry: https://npm.pkg.github.com
+          package: packages/dotenv/package.json
+      - name: 发布到 NPM
+        uses: JS-DevTools/npm-publish@v3
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+          registry: https://registry.npmjs.org/
+          package: packages/dotenv
           access: public
           provenance: true

@@ -1,0 +1,35 @@
+{
+  "name": "@candriajs/dotenv",
+  "version": "1.0.0",
+  "description": "一些常用包以及常用函数进行封装，并打包优化, 此包为dotenv封装",
+  "keywords": [
+    "dotenv"
+  ],
+  "homepage": "https://github.com/CandriaJS/core-lib",
+  "bugs": {
+    "url": "https://github.com/CandriaJS/core-lib/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CandriaJS/core-lib.git"
+  },
+  "license": "GNU AGPL-3.0",
+  "author": "CandriaJS",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "index.js"
+  ],
+  "scripts": {
+    "build": "tsc --noEmit && tsup",
+    "sync": "curl -X PUT \"https://registry-direct.npmmirror.com/-/package/@candriajs/dotenv/syncs\""
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "dotenv": "^17.0.1"
+  }
+}
