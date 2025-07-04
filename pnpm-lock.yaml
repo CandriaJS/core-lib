@@ -79,8 +79,8 @@ importers:
   packages/dotenv:
     devDependencies:
       dotenv:
-        specifier: ^17.0.1
-        version: 17.0.1
+        specifier: ^16.5.0
+        version: 16.6.1
 
   packages/exec: {}
 
@@ -1109,8 +1109,8 @@ packages:
     resolution: {integrity: sha512-35mSku4ZXK0vfCuHEDAwt55dg2jNajHZ1odvF+8SSr82EsZY4QmXfuWso8oEd8zRhVObSN18aM0CjSdoBX7zIw==}
     engines: {node: '>=0.10.0'}
 
-  dotenv@17.0.1:
-    resolution: {integrity: sha512-GLjkduuAL7IMJg/ZnOPm9AnWKJ82mSE2tzXLaJ/6hD6DhwGfZaXG77oB8qbReyiczNxnbxQKyh0OE5mXq0bAHA==}
+  dotenv@16.6.1:
+    resolution: {integrity: sha512-uBq4egWHTcTt33a72vpSG0z3HnPuIl6NqYcTrKEg2azoEyl2hpW0zqlxysq2pK9HlDIHyHyakeYaYnSAwd8bow==}
     engines: {node: '>=12'}
 
   dunder-proto@1.0.1:
@@ -3236,7 +3236,7 @@ snapshots:
     dependencies:
       esutils: 2.0.3
 
-  dotenv@17.0.1: {}
+  dotenv@16.6.1: {}
 
   dunder-proto@1.0.1:
     dependencies:

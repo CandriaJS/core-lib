@@ -22,6 +22,16 @@
     "dist",
     "index.js"
   ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./config": {
+      "types": "./dist/config.d.ts",
+      "default": "./dist/config.js"
+    }
+  },
   "scripts": {
     "build": "vite build && tsup",
     "sync": "curl -X PUT \"https://registry-direct.npmmirror.com/-/package/@candriajs/dotenv/syncs\""
@@ -30,6 +40,6 @@
     "node": ">=18"
   },
   "devDependencies": {
-    "dotenv": "^17.0.1"
+    "dotenv": "^16.5.0"
   }
 }
