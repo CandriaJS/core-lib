@@ -1,15 +1,9 @@
 import { defineConfig, type Options } from 'tsup'
 
 export const options: Options = ({
-  entry: ['src/index.ts'],
+  entry: ['src/index.ts', 'src/config.ts'],
   format: 'esm',
-  dts: { resolve: true },
-  outDir: 'dist',
-  target: 'node22',
-  platform: 'node',
-  minify: true,
-  outExtension: ( ) => ({
-    js: '.js'
-  })
+  dts: { resolve: true, only: true },
+  outDir: 'dist'
 })
 export default defineConfig(options)
