@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/CandriaJS/core-lib/compare/dotenv-v1.1.0...dotenv-v1.1.1) (2025-07-04)
+
+
+### 📦️ 构建系统
+
+* **dotenv:** 使用 Vite 构建代替 tsup ([40106be](https://github.com/CandriaJS/core-lib/commit/40106be26ad6cc719d11eaa204ebbc40e528e36f))
+
 ## [1.1.0](https://github.com/CandriaJS/core-lib/compare/dotenv-v1.0.0...dotenv-v1.1.0) (2025-07-04)
 
 
