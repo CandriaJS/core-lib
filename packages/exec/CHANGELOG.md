@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.5](https://github.com/CandriaJS/core-lib/compare/exec-v1.0.4...exec-v1.0.5) (2025-07-10)
+
+
+### ♻️ 代码重构
+
+* **exec:** 优化 exec 和 execSync 函数的日志输出 ([a39a72e](https://github.com/CandriaJS/core-lib/commit/a39a72e1be04a332bd43283a96ea009e6d763f79))
+
 ## [1.0.4](https://github.com/CandriaJS/core-lib/compare/exec-v1.0.3...exec-v1.0.4) (2025-06-18)
 
 
