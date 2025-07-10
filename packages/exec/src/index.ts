@@ -24,11 +24,10 @@ export function exec<T extends boolean = false> (
   cmd: string,
   options?: ExecOptions<T>
 ): Promise<ExecReturn<T>> {
-  const logger = console
   return new Promise((resolve) => {
     if (options?.log) {
-      logger.info([
-        '[exec] 执行命令:',
+      console.log([
+        '[Exec] 执行命令:',
         `pwd: ${options?.cwd ?? process.cwd()}`,
         `cmd: ${cmd}`,
         `options: ${JSON.stringify(options)}`
@@ -39,7 +38,7 @@ export function exec<T extends boolean = false> (
       if (options?.log) {
         const info = error as Error
         if (info.message) info.message = `\x1b[91m${info.message}\x1b[0m`
-        logger.info([
+        console.log([
           '[exec] 执行结果:',
           `stderr: ${stderr.toString()}`,
           `stdout: ${stdout.toString()}`,
@@ -92,10 +91,9 @@ export function execSync<T extends boolean = false> (
   cmd: string,
   options?: ExecOptions<T>
 ): ExecReturn<T> {
-  const logger = console
   if (options?.log) {
-    logger.info([
-      '[exec] 执行命令:',
+    console.log([
+      '[Exec] 执行命令:',
       `pwd: ${options?.cwd ?? process.cwd()}`,
       `cmd: ${cmd}`,
       `options: ${JSON.stringify(options)}`
@@ -107,7 +105,7 @@ export function execSync<T extends boolean = false> (
     const stderr = ''
 
     if (options?.log) {
-      logger.info([
+      console.log([
         '[exec] 执行结果:',
         `stderr: ${stderr}`,
         `stdout: ${stdout}`,
@@ -129,8 +127,10 @@ export function execSync<T extends boolean = false> (
     if (options?.log) {
       const info = error as Error
       if (info.message) info.message = `\x1b[91m${info.message}\x1b[0m`
-      logger.info([
+      console.log([
         '[exec] 执行结果:',
+        `stdout: ''`,
+        `stderr: ''`,
         `error: ${JSON.stringify(info, null, 2)}`
       ].join('\n'))
     }
