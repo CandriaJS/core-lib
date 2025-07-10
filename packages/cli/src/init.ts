@@ -48,7 +48,7 @@ const tsup = (dir: string) => {
 export const options: Options = ({
   entry: ['src/index.ts'],
   format: 'esm',
-  dts: { resolve: true },
+  dts: { resolve: true, only: true },
   outDir: 'dist',
   target: 'node22',
   platform: 'node',
@@ -61,6 +61,43 @@ export default defineConfig(options)
 `
 
   fs.writeFileSync(path.join(dir, 'tsup.config.ts'), template)
+}
+
+const vite = (dir: string) => { 
+  const template = `
+  import { defineConfig } from 'vite'
+import { builtinModules } from 'node:module'
+
+export default defineConfig({
+  build: {
+    target: 'es2022',
+    lib: {
+      formats: ['es'],
+      fileName: 'log4js',
+      entry: ['src/index.ts'],
+    },
+    emptyOutDir: true,
+    outDir: 'dist',
+    rollupOptions: {
+      external: [
+        ...builtinModules,
+        ...builtinModules.map((mod) => \`node:\${mod}\`),
+      ],
+      output: {
+        inlineDynamicImports: true,
+      },
+    },
+    minify: 'terser',
+    commonjsOptions: {
+      include: [
+        /node_modules/,
+      ],
+      transformMixedEsModules: true,
+      defaultIsModuleExports: true
+    },
+  }
+})`
+  fs.writeFileSync(path.join(dir, 'vite.config.ts'), template)
 }
 
 const release = (dir: string, name: string) => {
@@ -190,5 +227,6 @@ export async function init () {
   release(basePath, name)
   ci(basePath, name)
   tsup(dir)
+  vite(dir)
   console.log('初始化成功')
 }

@@ -25,7 +25,6 @@ export default defineConfig({
       output: {
         inlineDynamicImports: true
       },
-      cache: false
     },
     minify: true,
     commonjsOptions: {

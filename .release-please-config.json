@@ -105,6 +105,13 @@
       "component": "dotenv",
       "tag-separator": "-",
       "scope": "dotenv"
+    },
+    "packages/log4js": {
+      "release-type": "node",
+      "package-name": "@candriajs/log4js",
+      "component": "log4js",
+      "tag-separator": "-",
+      "scope": "log4js"
     }
   },
   "commit-search-depth": 50

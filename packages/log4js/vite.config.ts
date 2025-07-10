@@ -1,19 +1,13 @@
-import fs from 'node:fs'
-import { builtinModules } from 'node:module'
-
 import { defineConfig } from 'vite'
+import { builtinModules } from 'node:module'
 
 export default defineConfig({
   build: {
-    target: 'node22',
+    target: 'es2022',
     lib: {
-      formats: [
-        'es'
-      ],
-      fileName: () => 'index.js',
-      entry: [
-        'src/index.ts'
-      ]
+      formats: ['es'],
+      fileName: 'log4js',
+      entry: ['src/index.ts'],
     },
     emptyOutDir: true,
     outDir: 'dist',
@@ -21,19 +15,18 @@ export default defineConfig({
       external: [
         ...builtinModules,
         ...builtinModules.map((mod) => `node:${mod}`),
-        'form-data'
       ],
       output: {
-        inlineDynamicImports: true
+        inlineDynamicImports: true,
       },
     },
-    minify: true,
+    minify: 'terser',
     commonjsOptions: {
       include: [
-        /node_modules/
+        /node_modules/,
       ],
       transformMixedEsModules: true,
       defaultIsModuleExports: true
-    }
+    },
   }
 })

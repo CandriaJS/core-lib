@@ -19,7 +19,6 @@ export default defineConfig({
       output: {
         inlineDynamicImports: false,
       },
-      cache: false,
     },
     minify: 'terser',
     commonjsOptions: {
