@@ -6,7 +6,7 @@ export default defineConfig({
     target: 'es2022',
     lib: {
       formats: ['es'],
-      fileName: 'log4js',
+      fileName: 'index.js',
       entry: ['src/index.ts'],
     },
     emptyOutDir: true,
