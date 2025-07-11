@@ -51,8 +51,8 @@ importers:
   packages/axios:
     dependencies:
       form-data:
-        specifier: npm:@candriajs/form-data@1.0.7
-        version: '@candriajs/form-data@1.0.7'
+        specifier: npm:@candriajs/form-data@1.1.1
+        version: '@candriajs/form-data@1.1.1'
     devDependencies:
       axios:
         specifier: ^1.10.0
@@ -124,8 +124,8 @@ packages:
     resolution: {integrity: sha512-jYnje+JyZG5YThjHiF28oT4SIZLnYOcSBb6+SDaFIyzDVSkXQmQQYclJ2R+YxcdmK0AX6x1E5OQNtuh3jHDrUg==}
     engines: {node: '>=6.9.0'}
 
-  '@candriajs/form-data@1.0.7':
-    resolution: {integrity: sha512-Owe1+t3/rIhTQZB6KXFcraAY9q19MICkQpYELbSpCONVSXCIIVHwrRhqCeubOF7z1uBumk9JBRLyQifb/yJoRQ==}
+  '@candriajs/form-data@1.1.1':
+    resolution: {integrity: sha512-nIlr36i/3UVfQ7qkiAskMCodYUS48M75W8SuRDcyi8yii+VHIq2plEk6FWSxWO6WfaeQCtAjTPm9CweVQsD7sA==}
     engines: {node: '>=18'}
 
   '@emnapi/core@1.4.3':
@@ -2101,7 +2101,7 @@ snapshots:
       '@babel/helper-string-parser': 7.27.1
       '@babel/helper-validator-identifier': 7.27.1
 
-  '@candriajs/form-data@1.0.7': {}
+  '@candriajs/form-data@1.1.1': {}
 
   '@emnapi/core@1.4.3':
     dependencies:
