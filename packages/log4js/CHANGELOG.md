@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.4](https://github.com/CandriaJS/core-lib/compare/log4js-v1.1.3...log4js-v1.1.4) (2025-07-11)
+
+
+### 📦️ 构建系统
+
+* **log4js:** 优化项目构建并调整导出方式 ([6f30083](https://github.com/CandriaJS/core-lib/commit/6f300833c367a3c0e4d4b5dfee9a28663095f6d3))
+
 ## [1.1.3](https://github.com/CandriaJS/core-lib/compare/log4js-v1.1.2...log4js-v1.1.3) (2025-07-11)
 
 
