@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.9](https://github.com/CandriaJS/core-lib/compare/lodash-v1.0.8...lodash-v1.0.9) (2025-07-11)
+
+
+### 📦️ 构建系统
+
+* **exec:** 重构 exec 包的构建流程 ([9a3198f](https://github.com/CandriaJS/core-lib/commit/9a3198f41d5dfe3379f24683b1b739e02ac64870))
+
 ## [1.0.8](https://github.com/CandriaJS/core-lib/compare/lodash-v1.0.7...lodash-v1.0.8) (2025-07-11)
 
 
