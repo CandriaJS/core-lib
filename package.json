@@ -28,7 +28,7 @@
     "neostandard": "^0.12.1",
     "simple-git": "^3.28.0",
     "tsc-alias": "^1.8.11",
-    "tsup": "^8.5.0",
+    "tsdown": "^0.12.9",
     "tsx": "^4.19.3",
     "typescript": "^5.8.3",
     "vite": "npm:rolldown-vite@^7.0.7"

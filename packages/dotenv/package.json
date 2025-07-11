@@ -33,7 +33,7 @@
     }
   },
   "scripts": {
-    "build": "vite build && tsup",
+    "build": "vite build && tsdown",
     "sync": "curl -X PUT \"https://registry-direct.npmmirror.com/-/package/@candriajs/dotenv/syncs\""
   },
   "engines": {

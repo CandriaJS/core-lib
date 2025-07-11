@@ -23,7 +23,7 @@
     "README.md"
   ],
   "scripts": {
-    "build": "tsc --noEmit && tsup",
+    "build": "vite build && tsdown",
     "sync": "curl -X PUT \"https://registry-direct.npmmirror.com/-/package/@candriajs/exec/syncs\""
   },
   "engines": {

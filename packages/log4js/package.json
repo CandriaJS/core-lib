@@ -23,13 +23,14 @@
     "index.js"
   ],
   "scripts": {
-    "build": "vite build && tsup",
+    "build": "vite build && tsdown",
     "sync": "curl -X PUT \"https://registry-direct.npmmirror.com/-/package/@candriajs/log4js/syncs\""
   },
   "engines": {
     "node": ">=18"
   },
   "devDependencies": {
-    "log4js": "^6.9.1"
+    "log4js": "^6.9.1",
+    "tsdown": "^0.12.9"
   }
 }
