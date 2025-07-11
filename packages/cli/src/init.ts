@@ -136,7 +136,7 @@ const ci = (dir: string, name: string) => {
         name: '设置 pnpm',
         uses: 'pnpm/action-setup@v4',
         with: {
-          version: '9.13.2',
+          version: '10.12.4',
           run_install: '- args: [--no-frozen-lockfile]'
         }
       },

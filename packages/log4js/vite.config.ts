@@ -36,7 +36,7 @@ export default defineConfig({
       name: 'log4js-plugin',
       closeBundle () {
         fs.cpSync('./index.js', './dist/index.js')
-        console.log('构建axios成功!')
+        console.log('构建log4js成功!')
       }
     }
   ],
