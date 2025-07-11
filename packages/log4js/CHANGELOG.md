@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.5](https://github.com/CandriaJS/core-lib/compare/log4js-v1.1.4...log4js-v1.1.5) (2025-07-11)
+
+
+### 📦️ 构建系统
+
+* **deps:** 升级 pnpm 版本并调整相关配置 ([e669318](https://github.com/CandriaJS/core-lib/commit/e669318e032ffdc2a7461541241464b561f0248e))
+
 ## [1.1.4](https://github.com/CandriaJS/core-lib/compare/log4js-v1.1.3...log4js-v1.1.4) (2025-07-11)
 
 
