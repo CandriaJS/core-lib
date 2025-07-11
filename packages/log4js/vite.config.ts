@@ -6,7 +6,7 @@ export default defineConfig({
     target: 'es2022',
     lib: {
       formats: ['es'],
-      fileName: 'index',
+      fileName: () => 'index.js',
       entry: ['src/index.ts'],
     },
     emptyOutDir: true,
@@ -17,10 +17,11 @@ export default defineConfig({
         ...builtinModules.map((mod) => `node:${mod}`),
       ],
       output: {
+        format: 'es',
         inlineDynamicImports: true,
       },
     },
-    minify: 'terser',
+    minify: false,
     commonjsOptions: {
       include: [
         /node_modules/,

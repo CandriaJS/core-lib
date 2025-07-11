@@ -5,7 +5,7 @@ import { defineConfig } from 'vite'
 
 export default defineConfig({
   build: {
-    target: 'node18',
+    target: 'node22',
     lib: {
       formats: [
         'es'

@@ -30,6 +30,7 @@
     "node": ">=18"
   },
   "devDependencies": {
+    "chalk": "^5.4.1",
     "log4js": "^6.9.1",
     "tsdown": "^0.12.9"
   }

@@ -20,7 +20,7 @@ export default defineConfig({
         inlineDynamicImports: true,
       },
     },
-    minify: 'terser',
+    minify: true,
     commonjsOptions: {
       include: [
         /node_modules/,

@@ -7,9 +7,7 @@ export default defineConfig({
   build: {
     target: 'node22',
     lib: {
-      formats: [
-        'es'
-      ],
+      formats: ['es'],
       fileName: () => 'index.js',
       entry: [
         'src/index.ts'
