@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/CandriaJS/core-lib/compare/form-data-v1.1.0...form-data-v1.1.1) (2025-07-11)
+
+
+### 📦️ 构建系统
+
+* 替换 tsup 为 tsdown 并优化构建配置 ([220d0c0](https://github.com/CandriaJS/core-lib/commit/220d0c0413f5512862c6eafa0497f7610c3a0686))
+
 ## [1.1.0](https://github.com/CandriaJS/core-lib/compare/form-data-v1.0.7...form-data-v1.1.0) (2025-07-10)
 
 
