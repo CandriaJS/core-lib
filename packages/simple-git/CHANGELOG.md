@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.2](https://github.com/CandriaJS/core-lib/compare/simple-git-v1.1.1...simple-git-v1.1.2) (2025-07-11)
+
+
+### 📦️ 构建系统
+
+* 更新打包配置并修改构建命令 ([e3b1ca0](https://github.com/CandriaJS/core-lib/commit/e3b1ca0b8a73c8daa4a556f978dc68be2bb45293))
+
 ## [1.1.1](https://github.com/CandriaJS/core-lib/compare/simple-git-v1.1.0...simple-git-v1.1.1) (2025-07-11)
 
 

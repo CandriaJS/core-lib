@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.2](https://github.com/CandriaJS/core-lib/compare/axios-v1.1.1...axios-v1.1.2) (2025-07-11)
+
+
+### 📦️ 构建系统
+
+* **axios:** 更新依赖并调整构建配置 ([49a3f8a](https://github.com/CandriaJS/core-lib/commit/49a3f8a6524c2462044cd29ce6815d59e91a1d4d))
+
 ## [1.1.1](https://github.com/CandriaJS/core-lib/compare/axios-v1.1.0...axios-v1.1.1) (2025-07-11)
 
 
