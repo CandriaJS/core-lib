@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.2](https://github.com/CandriaJS/core-lib/compare/dotenv-v1.2.1...dotenv-v1.2.2) (2025-07-11)
+
+
+### 📦️ 构建系统
+
+* **deps:** 更新 Vite 依赖并调整相关配置 ([582dcee](https://github.com/CandriaJS/core-lib/commit/582dcee07c7a0070699ef695c15735baa80e889a))
+
 ## [1.2.1](https://github.com/CandriaJS/core-lib/compare/dotenv-v1.2.0...dotenv-v1.2.1) (2025-07-11)
 
 

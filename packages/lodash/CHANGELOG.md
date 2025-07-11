@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.10](https://github.com/CandriaJS/core-lib/compare/lodash-v1.0.9...lodash-v1.0.10) (2025-07-11)
+
+
+### 📦️ 构建系统
+
+* **deps:** 更新 Vite 依赖并调整相关配置 ([582dcee](https://github.com/CandriaJS/core-lib/commit/582dcee07c7a0070699ef695c15735baa80e889a))
+
 ## [1.0.9](https://github.com/CandriaJS/core-lib/compare/lodash-v1.0.8...lodash-v1.0.9) (2025-07-11)
 
 
