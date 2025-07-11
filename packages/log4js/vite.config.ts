@@ -1,12 +1,13 @@
 import { defineConfig } from 'vite'
 import { builtinModules } from 'node:module'
+import fs from 'node:fs'
 
 export default defineConfig({
   build: {
     target: 'es2022',
     lib: {
       formats: ['es'],
-      fileName: () => 'index.js',
+      fileName: () => 'log4js.js',
       entry: ['src/index.ts'],
     },
     emptyOutDir: true,
@@ -29,5 +30,14 @@ export default defineConfig({
       transformMixedEsModules: true,
       defaultIsModuleExports: true
     },
-  }
+  },
+  plugins: [
+    {
+      name: 'log4js-plugin',
+      closeBundle () {
+        fs.cpSync('./index.js', './dist/index.js')
+        console.log('构建axios成功!')
+      }
+    }
+  ],
 })
