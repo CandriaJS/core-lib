@@ -5,5 +5,5 @@
   "packages/lodash": "1.0.7",
   "packages/simple-git": "1.1.0",
   "packages/dotenv": "1.2.0",
-  "packages/log4js": "1.1.0"
+  "packages/log4js": "1.1.1"
 }
