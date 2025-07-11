@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.3](https://github.com/CandriaJS/core-lib/compare/log4js-v1.1.2...log4js-v1.1.3) (2025-07-11)
+
+
+### 📦️ 构建系统
+
+* **deps:** 更新 Vite 依赖并调整相关配置 ([582dcee](https://github.com/CandriaJS/core-lib/commit/582dcee07c7a0070699ef695c15735baa80e889a))
+
 ## [1.1.2](https://github.com/CandriaJS/core-lib/compare/log4js-v1.1.1...log4js-v1.1.2) (2025-07-11)
 
 
