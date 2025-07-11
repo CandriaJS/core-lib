@@ -42,20 +42,19 @@ const pack = (dir: string, name: string) => {
   fs.writeFileSync(path.join(dir, 'package.json'), JSON.stringify(JSON.parse(template), null, 2))
 }
 
-const tsup = (dir: string) => {
+const tsdown = (dir: string) => {
   const template = `import { defineConfig, type Options } from 'tsup'
 
 export const options: Options = ({
   entry: ['src/index.ts'],
   format: 'esm',
-  dts: { resolve: true, only: true },
+  dts: { resolve: true, emitDtsOnly: true, sourcemap: false },
   outDir: 'dist',
   target: 'node22',
   platform: 'node',
   minify: true,
-  outExtension: ( ) => ({
-    js: '.js'
-  })
+  clean: false,
+  sourcemap: false
 })
 export default defineConfig(options)
 `
@@ -226,7 +225,7 @@ export async function init () {
   pack(dir, name)
   release(basePath, name)
   ci(basePath, name)
-  tsup(dir)
+  tsdown(dir)
   vite(dir)
   console.log('初始化成功')
 }
