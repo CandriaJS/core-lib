@@ -22,6 +22,7 @@ jobs:
         steps.release-please.outputs['packages/simple-git--release_created'] }}
       dotenv_rerelease: ${{ steps.release-please.outputs['packages/dotenv--release_created'] }}
       log4js_rerelease: ${{ steps.release-please.outputs['packages/log4js--release_created'] }}
+      sqlite3_rerelease: ${{ steps.release-please.outputs['packages/sqlite3--release_created'] }}
     steps:
       - name: 获取token
         uses: actions/create-github-app-token@v2
@@ -321,5 +322,45 @@ jobs:
           token: ${{ secrets.NPM_TOKEN }}
           registry: https://registry.npmjs.org/
           package: packages/log4js
+          access: public
+          provenance: true
+  publish-sqlite3:
+    needs: release
+    if: ${{ needs.release.outputs.sqlite3_rerelease == 'true' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: 设置 pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9.13.2
+          run_install: "- args: [--no-frozen-lockfile]"
+      - name: 构建
+        run: |-
+          pnpm build
+          mkdir -p ${{ runner.temp }}/temp/sqlite3
+          cp -r package.json README.md dist ${{ runner.temp }}/temp/sqlite3
+        working-directory: packages/sqlite3
+      - name: 上传构建产物
+        uses: actions/upload-artifact@v4
+        with:
+          name: sqlite3
+          path: ${{ runner.temp }}/temp/sqlite3
+      - name: 发布到 GitHub Packages
+        uses: JS-DevTools/npm-publish@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          registry: https://npm.pkg.github.com
+          package: packages/sqlite3/package.json
+      - name: 发布到 NPM
+        uses: JS-DevTools/npm-publish@v3
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+          registry: https://registry.npmjs.org/
+          package: packages/sqlite3
           access: public
           provenance: true

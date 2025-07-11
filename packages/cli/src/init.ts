@@ -32,7 +32,7 @@ const pack = (dir: string, name: string) => {
     "index.js"
   ],
   "scripts": {    
-    "build": "tsc --noEmit && tsup",
+    "build": "vite build && tsdown",
     "sync": "curl -X PUT \\\"https://registry-direct.npmmirror.com/-/package/@candriajs/${name}/syncs\\\""
   },
   "engines": {
@@ -59,7 +59,7 @@ export const options: Options = ({
 export default defineConfig(options)
 `
 
-  fs.writeFileSync(path.join(dir, 'tsup.config.ts'), template)
+  fs.writeFileSync(path.join(dir, 'tsdown.config.ts'), template)
 }
 
 const vite = (dir: string) => { 
@@ -72,7 +72,7 @@ export default defineConfig({
     target: 'es2022',
     lib: {
       formats: ['es'],
-      fileName: 'log4js',
+      fileName: 'index',
       entry: ['src/index.ts'],
     },
     emptyOutDir: true,
