@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.5](https://github.com/CandriaJS/core-lib/compare/sqlite3-v1.1.4...sqlite3-v1.1.5) (2025-07-12)
+
+
+### 📦️ 构建系统
+
+* **cli:** 修改打包配置，将 README.md 纳入打包文件 ([1c06376](https://github.com/CandriaJS/core-lib/commit/1c06376c501d74913c7d74f889dfd53ed78e28b4))
+
 ## [1.1.4](https://github.com/CandriaJS/core-lib/compare/sqlite3-v1.1.3...sqlite3-v1.1.4) (2025-07-12)
 
 
