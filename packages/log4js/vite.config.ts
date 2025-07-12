@@ -7,7 +7,7 @@ export default defineConfig({
     target: 'es2022',
     lib: {
       formats: ['es'],
-      fileName: () => 'log4js.js',
+      fileName: 'log4js',
       entry: ['src/index.ts'],
     },
     emptyOutDir: true,
@@ -18,7 +18,6 @@ export default defineConfig({
         ...builtinModules.map((mod) => `node:${mod}`),
       ],
       output: {
-        format: 'es',
         inlineDynamicImports: true,
       },
     },

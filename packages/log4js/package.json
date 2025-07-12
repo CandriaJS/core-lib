@@ -20,7 +20,7 @@
   "types": "./dist/index.d.ts",
   "files": [
     "dist",
-    "index.js"
+    "README.md"
   ],
   "scripts": {
     "build": "vite build && tsdown",
@@ -31,7 +31,6 @@
   },
   "devDependencies": {
     "chalk": "^5.4.1",
-    "log4js": "^6.9.1",
-    "tsdown": "^0.12.9"
+    "log4js": "^6.8.0"
   }
 }
