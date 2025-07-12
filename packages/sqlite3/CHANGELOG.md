@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/CandriaJS/core-lib/compare/sqlite3-v1.1.0...sqlite3-v1.1.1) (2025-07-12)
+
+
+### 📦️ 构建系统
+
+* **deps:** 升级 pnpm 版本并调整相关配置 ([e669318](https://github.com/CandriaJS/core-lib/commit/e669318e032ffdc2a7461541241464b561f0248e))
+
 ## [1.1.0](https://github.com/CandriaJS/core-lib/compare/sqlite3-v1.0.0...sqlite3-v1.1.0) (2025-07-11)
 
 
