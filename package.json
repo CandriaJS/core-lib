@@ -36,8 +36,8 @@
   "packageManager": "pnpm@10.12.4",
   "pnpm": {
     "onlyBuiltDependencies": [
-      "esbuild",
-      "sqlite3"
+      "@karinjs/sqlite3",
+      "esbuild"
     ]
   }
 }
