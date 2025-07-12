@@ -31,6 +31,6 @@
   },
   "devDependencies": {
     "chalk": "^5.4.1",
-    "log4js": "^6.8.0"
+    "log4js": "6.8.0"
   }
 }
