@@ -43,7 +43,7 @@ const pack = (dir: string, name: string) => {
 }
 
 const tsdown = (dir: string) => {
-  const template = `import { defineConfig, type Options } from 'tsup'
+  const template = `import { defineConfig, type Options } from 'tsdown'
 
 export const options: Options = ({
   entry: ['src/index.ts'],
@@ -63,8 +63,7 @@ export default defineConfig(options)
 }
 
 const vite = (dir: string) => { 
-  const template = `
-  import { defineConfig } from 'vite'
+  const template = `import { defineConfig } from 'vite'
 import { builtinModules } from 'node:module'
 
 export default defineConfig({

@@ -1,0 +1,35 @@
+{
+  "name": "@candriajs/sqlite3",
+  "version": "1.0.0",
+  "description": "一些常用包以及常用函数进行封装，并打包优化, 此包为sqlite3封装",
+  "keywords": [
+    "sqlite3"
+  ],
+  "homepage": "https://github.com/CandriaJS/core-lib",
+  "bugs": {
+    "url": "https://github.com/CandriaJS/core-lib/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CandriaJS/core-lib.git"
+  },
+  "license": "GNU AGPL-3.0",
+  "author": "CandriaJS",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "index.js"
+  ],
+  "scripts": {
+    "build": "vite build && tsdown",
+    "sync": "curl -X PUT \"https://registry-direct.npmmirror.com/-/package/@candriajs/sqlite3/syncs\""
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "sqlite3": "npm:@karinjs/sqlite3@^0.1.3"
+  }
+}

@@ -112,6 +112,13 @@
       "component": "log4js",
       "tag-separator": "-",
       "scope": "log4js"
+    },
+    "packages/sqlite3": {
+      "release-type": "node",
+      "package-name": "@candriajs/sqlite3",
+      "component": "sqlite3",
+      "tag-separator": "-",
+      "scope": "sqlite3"
     }
   },
   "commit-search-depth": 50
