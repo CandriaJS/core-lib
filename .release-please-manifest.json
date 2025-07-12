@@ -6,5 +6,5 @@
   "packages/simple-git": "1.1.2",
   "packages/dotenv": "1.2.3",
   "packages/log4js": "1.1.7",
-  "packages/sqlite3": "1.1.1"
+  "packages/sqlite3": "1.1.2"
 }
