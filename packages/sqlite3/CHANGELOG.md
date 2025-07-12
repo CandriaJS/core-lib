@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.4](https://github.com/CandriaJS/core-lib/compare/sqlite3-v1.1.3...sqlite3-v1.1.4) (2025-07-12)
+
+
+### 📦️ 构建系统
+
+* **sqlite3:** 兼容 node 模块 ([0f98af1](https://github.com/CandriaJS/core-lib/commit/0f98af1ef67e0ff61910286258836d087eb4401d))
+
 ## [1.1.3](https://github.com/CandriaJS/core-lib/compare/sqlite3-v1.1.2...sqlite3-v1.1.3) (2025-07-12)
 
 
