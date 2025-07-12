@@ -22,15 +22,21 @@
     "dist",
     "index.js"
   ],
+  "binary": {
+    "napi_versions": [
+      3,
+      6
+    ]
+  },
   "scripts": {
     "build": "vite build && tsdown",
-    "sync": "curl -X PUT \"https://registry-direct.npmmirror.com/-/package/@candriajs/sqlite3/syncs\"",
-    "install": "npx @karinjs/prebuild-install -r napi --pkg_version=5.1.7 --pkg_name=sqlite3"
-  },
-  "engines": {
-    "node": ">=18"
+    "install": "npx @karinjs/prebuild-install -r napi --pkg_version=5.1.7 --pkg_name=sqlite3",
+    "sync": "curl -X PUT \"https://registry-direct.npmmirror.com/-/package/@candriajs/sqlite3/syncs\""
   },
   "devDependencies": {
     "sqlite3": "5.1.7"
+  },
+  "engines": {
+    "node": ">=18"
   }
 }
