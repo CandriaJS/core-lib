@@ -29,7 +29,7 @@ const pack = (dir: string, name: string) => {
   "types": "./dist/index.d.ts",
   "files": [
     "dist",
-    "index.js"
+    "README.md"
   ],
   "scripts": {    
     "build": "vite build && tsdown",
