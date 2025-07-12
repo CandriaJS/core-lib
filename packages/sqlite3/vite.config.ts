@@ -1,12 +1,13 @@
 import { defineConfig } from 'vite'
 import { builtinModules } from 'node:module'
+import fs from 'node:fs'
 
 export default defineConfig({
   build: {
     target: 'es2022',
     lib: {
       formats: ['es'],
-      fileName: 'index',
+      fileName: 'sqlite3',
       entry: ['src/index.ts'],
     },
     emptyOutDir: true,
@@ -28,5 +29,14 @@ export default defineConfig({
       transformMixedEsModules: true,
       defaultIsModuleExports: true
     },
-  }
+  },
+  plugins: [
+    {
+      name: 'sqlite3-plugin',
+      closeBundle () {
+        fs.cpSync('./index.js', './dist/index.js')
+        console.log('构建sqlite3成功!')
+      }
+    }
+  ],
 })
