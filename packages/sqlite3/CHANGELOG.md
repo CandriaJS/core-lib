@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.3](https://github.com/CandriaJS/core-lib/compare/sqlite3-v1.1.2...sqlite3-v1.1.3) (2025-07-12)
+
+
+### 📦️ 构建系统
+
+* **sqlite3:** 更新预构建二进制版本并调整配置 ([f7d29db](https://github.com/CandriaJS/core-lib/commit/f7d29db36ca78e81d639c62d7a6c844926001298))
+
 ## [1.1.2](https://github.com/CandriaJS/core-lib/compare/sqlite3-v1.1.1...sqlite3-v1.1.2) (2025-07-12)
 
 
