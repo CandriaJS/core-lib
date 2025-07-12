@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.7](https://github.com/CandriaJS/core-lib/compare/log4js-v1.1.6...log4js-v1.1.7) (2025-07-12)
+
+
+### 📦️ 构建系统
+
+* **deps:** 修正 devDependencies 版本 ([5f35b11](https://github.com/CandriaJS/core-lib/commit/5f35b11b81e8e2a3ae68168b4c698d28b081a5fe))
+
 ## [1.1.6](https://github.com/CandriaJS/core-lib/compare/log4js-v1.1.5...log4js-v1.1.6) (2025-07-12)
 
 
