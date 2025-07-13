@@ -23,7 +23,7 @@
     "README.md"
   ],
   "scripts": {
-    "build": "vite build && tsdown",
+    "build": "vite build",
     "sync": "curl -X PUT \"https://registry-direct.npmmirror.com/-/package/@candriajs/lodash/syncs\""
   },
   "engines": {
