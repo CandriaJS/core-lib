@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.11](https://github.com/CandriaJS/core-lib/compare/lodash-v1.0.10...lodash-v1.0.11) (2025-07-13)
+
+
+### 📦️ 构建系统
+
+* **lodash:** 重构构建流程并移除 tsdown ([ab10191](https://github.com/CandriaJS/core-lib/commit/ab10191cbf84ad7577d5ed8d72cf15ac670f85a1))
+
 ## [1.0.10](https://github.com/CandriaJS/core-lib/compare/lodash-v1.0.9...lodash-v1.0.10) (2025-07-11)
 
 

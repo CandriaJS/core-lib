@@ -2,7 +2,7 @@
   "packages/axios": "1.1.2",
   "packages/form-data": "1.1.2",
   "packages/exec": "1.0.7",
-  "packages/lodash": "1.0.10",
+  "packages/lodash": "1.0.11",
   "packages/simple-git": "1.1.2",
   "packages/dotenv": "1.2.3",
   "packages/log4js": "1.1.7",
