@@ -23,6 +23,9 @@ jobs:
       dotenv_rerelease: ${{ steps.release-please.outputs['packages/dotenv--release_created'] }}
       log4js_rerelease: ${{ steps.release-please.outputs['packages/log4js--release_created'] }}
       sqlite3_rerelease: ${{ steps.release-please.outputs['packages/sqlite3--release_created'] }}
+      node-schedule_rerelease: ${{
+        steps.release-please.outputs['packages/node-schedule--release_created']
+        }}
     steps:
       - name: 获取token
         uses: actions/create-github-app-token@v2
@@ -362,5 +365,48 @@ jobs:
           token: ${{ secrets.NPM_TOKEN }}
           registry: https://registry.npmjs.org/
           package: packages/sqlite3
+          access: public
+          provenance: true
+  publish-node-schedule:
+    needs: release
+    if: ${{ needs.release.outputs.node-schedule_rerelease == 'true' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: 设置 pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10.12.4
+          run_install: "- args: [--no-frozen-lockfile]"
+      - name: 构建
+        run: >-
+          pnpm build
+
+          mkdir -p ${{ runner.temp }}/temp/node-schedule
+
+          cp -r package.json README.md dist ${{ runner.temp
+          }}/temp/node-schedule
+        working-directory: packages/node-schedule
+      - name: 上传构建产物
+        uses: actions/upload-artifact@v4
+        with:
+          name: node-schedule
+          path: ${{ runner.temp }}/temp/node-schedule
+      - name: 发布到 GitHub Packages
+        uses: JS-DevTools/npm-publish@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          registry: https://npm.pkg.github.com
+          package: packages/node-schedule/package.json
+      - name: 发布到 NPM
+        uses: JS-DevTools/npm-publish@v3
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+          registry: https://registry.npmjs.org/
+          package: packages/node-schedule
           access: public
           provenance: true

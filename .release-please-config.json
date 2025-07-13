@@ -119,6 +119,13 @@
       "component": "sqlite3",
       "tag-separator": "-",
       "scope": "sqlite3"
+    },
+    "packages/node-schedule": {
+      "release-type": "node",
+      "package-name": "@candriajs/node-schedule",
+      "component": "node-schedule",
+      "tag-separator": "-",
+      "scope": "node-schedule"
     }
   },
   "commit-search-depth": 50
