@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite'
 import { builtinModules } from 'node:module'
+import fs from 'node:fs'
 
 export default defineConfig({
   build: {
@@ -20,7 +21,7 @@ export default defineConfig({
         inlineDynamicImports: true,
       },
     },
-    minify: 'terser',
+    minify: true,
     commonjsOptions: {
       include: [
         /node_modules/,
@@ -28,5 +29,17 @@ export default defineConfig({
       transformMixedEsModules: true,
       defaultIsModuleExports: true
     },
-  }
+  },
+    /**
+     * 编译结束插件
+     */
+    plugins: [
+      {
+        name: 'node-schedule-plugin',
+        closeBundle () {
+          fs.cpSync('./node_modules/@types/node-schedule/index.d.ts', './dist/index.d.ts')
+          console.log('构建node-schedule成功!')
+        }
+      }
+    ]
 })
